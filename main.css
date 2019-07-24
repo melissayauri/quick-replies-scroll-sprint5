@@ -15,7 +15,9 @@
     white-space: nowrap;
     /*outline: 1px solid blue;*/
 }
-
+.hide{
+  display: none;
+}
 .outline{
     outline: 1px solid red;
 }
@@ -32,7 +34,7 @@
   .items {
     position: relative;
     left:20%;
-    width: 20%;
+    width: 300px;
     /*overflow-x: hidden;*/
    /* overflow-y: hidden;*/
   /* overflow-x: auto;

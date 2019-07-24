@@ -1,0 +1,152 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+.container {
+	width: 220px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	margin: 0 auto;
+    /*overflow: auto;*/
+    overflow-x: scroll;
+    overflow-y: hidden;
+    outline: 1px solid red;
+    padding: 20px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.container::-webkit-scrollbar {
+	display: none;
+}
+
+@media screen and (max-width: 1199px) {
+	.container {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+}
+
+.box {
+	position: relative;
+	display: flex;
+	align-items: stretch;
+	height:auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+/*
+@media screen and (max-width: 419px) {
+	.box {
+		height: 150px;
+	}
+}
+
+@media screen and (min-width: 420px) {
+	.box {
+		height: 187.5px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.box {
+		height: 262.5px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.box {
+		height: 337.5px;
+	}
+}*/
+
+.box .arrow {
+	position: fixed;
+	top: 0;
+	display: flex;
+	align-items: center;
+	margin-top: -0.5em;
+	font-size: 2em;
+	line-height: 1;
+	transition: opacity 300ms;
+	top: 87px;
+}
+
+@media screen and (min-width: 420px) {
+	.box .arrow {
+		top: 105.75px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.box .arrow {
+		top: 143.25px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.box .arrow {
+		top: 180.75px;
+	}
+}
+
+.box .arrow.isVisible {
+	opacity: 0.5;
+}
+
+.box .arrow:not(.isVisible) {
+	opacity: 0;
+}
+
+.box .arrow--left {
+	left: 6px;
+}
+
+.box .arrow--right {
+	right: 6px;
+}
+
+.box .item {
+	flex: 0 0 auto;
+    outline: 1px solid blue;
+    
+}
+
+/*@media screen and (max-width: 419px) {*/
+	.box .item {
+		
+	}
+
+	.box .item + .item {
+		margin-left: 20px;
+	}
+/*}*/
+
+/*@media screen and (min-width: 420px) {
+	.box .item {
+		width: 187.5px;
+	}
+
+	.box .item + .item {
+		margin-left: 10px;
+	}
+/*}*/
+
+/*@media screen and (min-width: 768px) {
+	.box .item {
+		width: 262.5px;
+	}
+
+	.box .item + .item {
+		margin-left: 14px;
+	}
+}*/
+/*
+@media screen and (min-width: 1200px) {
+	.box .item {
+		width: 337.5px;
+	}
+
+	.box .item + .item {
+		margin-left: 18px;
+	}
+}*/
